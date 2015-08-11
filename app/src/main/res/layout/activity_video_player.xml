@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="#88FFFFFF">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/buttons"
+            android:layout_alignParentBottom="true"
+            android:background="#88FFFFFF">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true">
+
+                <TextView android:id="@+id/time_current"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="4dip"
+                    android:paddingLeft="4dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="4dip"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:text="00:00"
+                    android:visibility="invisible"/>
+
+                <RelativeLayout
+                    android:id="@+id/rangeLayout"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+
+                </RelativeLayout>
+
+                <TextView android:id="@+id/time"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="4dip"
+                    android:paddingRight="4dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dip"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:text="00:00"
+                    android:visibility="invisible" />
+
+                <ImageButton android:id="@+id/fullscreen"
+                    android:layout_marginTop="-7dp"
+                    android:paddingTop="4dip"
+                    android:paddingBottom="4dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="4dip"
+                    android:layout_gravity="top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:text="DESCARTAR"/>
+
+                <Button
+                    android:id="@+id/continueButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:text="CONTINUAR"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/buttons">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Editar vídeo..."
+                android:layout_margin="5dp"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="15dp"/>
+            <FrameLayout
+                android:id="@+id/videoSurfaceContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/title">
+
+                <SurfaceView
+                    android:id="@+id/videoSurface"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+        </RelativeLayout>
+</RelativeLayout >
