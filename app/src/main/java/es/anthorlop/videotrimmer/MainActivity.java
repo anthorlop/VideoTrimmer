@@ -116,8 +116,10 @@ public class MainActivity extends Activity {
 
                 String path = data.getExtras().getString(VideoRecorderedPlayerActivity.VIDEO_PATH);
 
+                url_file = path.replace("_edited.mp4", ".mp4");
+
                 // eliminamos el video inicial
-                File orig = new File(path.replace("_edited.mp4", ".mp4"));
+                File orig = new File(url_file);
                 if (orig.exists() && orig.isFile()) {
                     orig.delete();
                 }
