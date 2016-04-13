@@ -1,6 +1,8 @@
 # VideoTrimmer
 <body>
 <h2>Select, preview and edit a video file</h2>
+<p>
+Apache License 2.0</p>
 <p>Native Android app for edit video files
 <ol> 
 <li>IDE: Latest version of Android Studio 1.2.2 for MAC OS X</li>
